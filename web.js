@@ -11,7 +11,7 @@ fs.readFile('index.html', function (err, data) {
 
   var b = new Buffer(data, "utf-8")
 
-//  response.send(b.toString());
+  response.send(b.toString());
 	
 });
 
@@ -19,7 +19,7 @@ fs.readFile('index.html', function (err, data) {
 
 
 
-response.send(b.toString());
+//response.send(b.toString());
 });
 
 var port = process.env.PORT || 5000;
