@@ -6,19 +6,20 @@ var app = express.createServer(express.logger());
 app.get('/', function(request, response) {
 
  
-fs.readFile('index.html, function (err, data) {
+fs.readFile('index.html', function (err, data) {
   if (err) throw err;
 
-  //var snowman = new Buffer("☃", "utf-8")
+  var b = new Buffer(data, "utf-8")
 
-  console.log(data);
+//  response.send(b.toString());
+	
 });
 
 
 
 
 
-response.send('Hello World 2!');
+response.send(b.toString());
 });
 
 var port = process.env.PORT || 5000;
